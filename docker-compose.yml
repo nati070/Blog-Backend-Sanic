@@ -1,6 +1,7 @@
 services:
   dcoya-blog:
     build: ./server/
+    command: sh -c "sleep 10s ; python ./server.py"
     depends_on:
       - dcoya_db
     ports:
@@ -10,8 +11,9 @@ services:
     build: ./sql/
     restart: always
     environment:
-      MYSQL_DATABASE: 'root'
+      MYSQL_DATABASE: dcoya
       MYSQL_ROOT_PASSWORD: '986532'
+ 
     ports:
-      - '3307:3307'
+      - '6603:3306'
 

@@ -29,9 +29,9 @@ async def get_all_posts(session):
             if not posts:
                 raise ErrorPostNotExist
             return [post for (post,) in posts]
-    except ErrorPostNotExist:
+    except ErrorPostNotExist as e:
         raise ErrorPostNotExist
-    except Exception:
+    except Exception as e:
         raise ErrorGetAllPosts
 
 async def get_post(blog_id , session):
@@ -42,7 +42,7 @@ async def get_post(blog_id , session):
             if not blog:
                 raise ErrorPostNotExist
             return blog
-    except ErrorPostNotExist:
+    except ErrorPostNotExist as e:
         raise ErrorPostNotExist
     except Exception as e:
         raise ErrorGetAllPosts

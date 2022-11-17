@@ -1,6 +1,5 @@
-CREATE DATABASE dcoya;
-use dcoya;
 
+use dcoya;
 CREATE TABLE users(
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     username varchar(100) NOT NULL, 

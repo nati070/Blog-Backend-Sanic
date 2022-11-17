@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 
 #Run app.py when the container launches
-CMD ["python", "server.py"]
+# CMD ["python", "server.py"]
 
 ## new img - docker build -t dcoya-image .
 ## docker run --name mysanic -p 8000:8000 -d dcoya-image
